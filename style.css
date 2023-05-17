@@ -121,7 +121,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "logo""tagline""picture";
-  grid-template-rows: auto calc(50vh - var(--padding-small)*2) 50vh
+  grid-template-rows: auto calc(5vh - var(--padding-small)*2) 50vh
 }
 
 @media (min-width: 1000px) {
