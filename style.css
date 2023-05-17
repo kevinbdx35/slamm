@@ -29,10 +29,10 @@
 }
 
 :root {
-  --c-bg: #1D2326;
+  --c-bg: #074259;
   --c-text: hsl(0, 0%, 100%);
   --c-black: #000;
-  --c-orange: #F24141;
+  --c-orange: #F2BB16;
   --c-white: #fff;
   --f-family: Galliano, sans-serif;
   --f-size: 18px;
