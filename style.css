@@ -593,3 +593,24 @@ svg.partner-logo {
   margin-top: .65rem
 }
 */
+
+table.bottomBorder {
+  border-collapse: collapse;
+}
+
+table.bottomBorder td,
+table.bottomBorder th {
+  border-bottom: 2px solid var(--c-bg);
+  padding : 30px;
+  text-align: left;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.div1{ grid-area: 1 / 1 / 2 / 2;}
