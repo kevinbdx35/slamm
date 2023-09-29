@@ -616,3 +616,18 @@ table.bottomBorder th {
 }
 
 .div1{ grid-area: 1 / 1 / 2 / 2;}
+
+
+/* CSS pour le bouton*/
+.inscription {
+  background-color: var(--c-green); /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  text-decoration: none; /* Supprimer la décoration de lien */
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  position: absolute; /* Position absolue pour le positionner par-dessus l'image */
+  top: 45%; /* Ajustez la valeur pour régler la position verticale */
+  left: 35%; /* Ajustez la valeur pour régler la position horizontale */
+  z-index: 2; /* Assurez-vous que le bouton est au-dessus de l'image (z-index) */
+}
