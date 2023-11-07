@@ -39,6 +39,16 @@
         <!-- Styles -->
         <link href="style.css" rel="stylesheet">
         <script src="assets/js/main.js" defer></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <style>
+          /* Ajustez la taille de la carte en fonction de vos besoins */
+          #map {
+            height: 500px;
+            width: 100%;
+          }
+        </style>    
     </head>
     <body>
         <header class="header">
@@ -196,6 +206,10 @@
                 </div>
             </div>
         </div>-->
+        <div id="map">
+
+            
+        </div>
         <footer class="footer">
             <div class="footer-column footer-contacts">
                 <div class="footer-column-content">
@@ -218,5 +232,18 @@
                 </div>
             </div>
         </footer>
+        <script>
+      // Créez une carte Leaflet
+      var map = L.map("map").setView([48.62910403296414, -2.112036242677003,], 15);
+
+      // Ajoutez une couche de carte OpenStreetMap
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Ajoutez un marqueur pour l'adresse
+      var marker = L.marker([48.62910403296414, -2.112036242677003]).addTo(map);
+      marker.bindPopup("Salle Omnisport de Saint-Lunaire, 361 Rue de la Saudrais, 35800 Saint-Lunaire").openPopup();
+    </script>
     </body>
 </html>
