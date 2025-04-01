@@ -134,9 +134,19 @@
         </div>
         <!-- Volumes -->
         <div class="text-image left-image holds">
-            <figure class="holder">
-                <img class="image image-holds" src="img/photo1.jpeg">
-            </figure>
+            <picture class="holder">
+                <img class="image image-holds"
+                sizes="(max-width: 1208px) 100vw, 1208px"
+                srcset="
+                /img/photo1_vh5j9p_c_scale,w_200.jpg 200w,
+                /img/photo1_vh5j9p_c_scale,w_510.jpg 510w,
+                /img/photo1_vh5j9p_c_scale,w_732.jpg 732w,
+                /img/photo1_vh5j9p_c_scale,w_896.jpg 896w,
+                /img/photo1_vh5j9p_c_scale,w_1182.jpg 1182w,
+                /img/photo1_vh5j9p_c_scale,w_1208.jpg 1208w"
+                src="/img/photo1_vh5j9p_c_scale,w_1208.jpg"
+                alt="Image de quelques membres de SLAMM">
+            </picture>
             <div class="text-column">
                 <div class="text-column-content">
                     <h2 class="text-column-title green">BÉNÉFICES</h2>
