@@ -632,6 +632,73 @@ table.bottomBorder th {
   z-index: 2; /* Assurez-vous que le bouton est au-dessus de l'image (z-index) */
 }
 
+
+/* FAQ */
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.faq {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-container {
+  margin: 30px auto;
+  max-width: 20rem;
+ 
+}
+
+.faq-item {
+  border-radius: 5px;
+  border: solid 1px var(--c-green);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.active {
+  padding: 0 20px 20px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  .faq-question {
+    padding: 15px;
+  }
+}
+
+
 /* FAQ separator*/
 .faq-separator {
   display: none;
@@ -649,3 +716,5 @@ table.bottomBorder th {
   display: block;
   transform: scaleX(1);
 }
+
+
