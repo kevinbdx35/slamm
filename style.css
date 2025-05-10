@@ -631,3 +631,21 @@ table.bottomBorder th {
   left: 35%; /* Ajustez la valeur pour régler la position horizontale */
   z-index: 2; /* Assurez-vous que le bouton est au-dessus de l'image (z-index) */
 }
+
+/* FAQ separator*/
+.faq-separator {
+  display: none;
+  border: none;
+  height: 1px;
+  background-color: var(--c-green);
+  margin: 0px 0px 20px 20px;
+  width: 10%;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 3s ease;
+}
+
+.faq-separator.active {
+  display: block;
+  transform: scaleX(1);
+}
