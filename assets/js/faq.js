@@ -1,0 +1,105 @@
+// FAQ data
+const faqData = [
+    {
+      question: "Faut-il avoir de l'expérience pour commencer le MMA ?",
+      answer: "Non, aucune expérience n’est nécessaire. Nos cours sont ouverts à tous les niveaux. Nos encadrants vous accompagnent pas à pas, en vous enseignant les bases avec pédagogie, pour vous permettre de progresser à votre rythme. Une expérience préalable peut aider, mais elle n’est en aucun cas obligatoire."
+    },
+    {
+      question: "À partir de quel âge peut-on pratiquer le MMA ?",
+      answer: "Au sein de notre association, nous acceptons les membres à partir de 16 ans. Pour les plus jeunes, en attendant que nous ouvrions des créneaux spécifiques un jour, nous recommandons de commencer par des disciplines plus spécifiques comme le judo, le jiu-jitsu brésilien, la boxe,..., avant de se diriger vers le MMA."
+    },
+    {
+      question: "Quel équipement est nécessaire pour débuter ?",
+      answer: "Pour venir essayer, il vous suffit d’une tenue de sport confortable, d’une bouteille d’eau et éventuellement d’une serviette. Par la suite, il sera nécessaire d’acquérir un équipement spécifique : gants, protège-tibias, protège-dents et coquille ou protection pelvienne. Nos encadrants vous conseilleront sur le choix du matériel dès vos premiers cours."
+    },  
+    {
+      question: "Quelle est la fréquence d'entraînement recommandée ?",
+      answer: "Pour progresser régulièrement, nous recommandons de participer à 2 à 3 séances par semaine. Cela dit, même une séance hebdomadaire peut vous permettre d’évoluer et de bénéficier des bienfaits du MMA. Tout dépend de vos objectifs personnels et de votre disponibilité. L’essentiel reste la régularité et l’engagement lors des entraînements"
+    },
+    {
+      question: "Le MMA est-il dangereux ?",
+      answer: "Pratiqué dans un cadre encadré comme notre association et avec un équipement approprié, le MMA est un sport sécuritaire. Nos cours mettent l'accent sur la technique, le contrôle et le respect du partenaire. Les exercices sont progressifs et adaptés au niveau de chacun, avec des règles strictes de sécurité pour minimiser les risques de blessures grâce à un apprentissage étape par étape des techniques."
+    },
+    {
+      question: "Comment se déroule un cours type ?",
+      answer: "Un cours typique dure entre 1h30 et 2h. Il débute par un échauffement dynamique, suivi d’exercices techniques propres à la discipline. La séance se poursuit généralement par des mises en application ou du sparring léger, pour ceux qui le souhaitent. Elle se termine par un retour au calme accompagné d’étirements."
+    },
+    {
+      question: "Est-ce que je dois participer à des compétitions ?",
+      answer: "Absolument pas. La compétition est entièrement optionnelle et s’adresse uniquement à ceux qui le souhaitent. La majorité de nos membres pratiquent le MMA pour le loisir, la condition physique, l’apprentissage technique ou simplement par plaisir. Nous respectons les objectifs de chacun."
+    },
+    {
+      question: "Comment s'inscrire aux cours d'essai ?",
+      answer: "Vous avez la possibilité de participer à deux séances d’essai gratuites avant de vous engager. Pour réserver votre place, contactez-nous par téléphone au 07 82 77 92 88 ou par email à slamm35800@gmail.com. Nous vous recommandons d’arriver 15 minutes avant le début du cours afin que nous puissions vous accueillir et vous présenter les installations."
+    }
+  ];
+  
+  function createFaqElements() {
+    const faqContainer = document.querySelector('.faq-container');
+  
+    if (!faqContainer) {
+      console.error('FAQ container not found');
+      return;
+    }
+  
+    faqData.forEach((item, index) => {
+      // Create elements
+      const faqItem = document.createElement('div');
+      faqItem.classList.add('faq-item');
+  
+      const faqQuestion = document.createElement('div');
+      faqQuestion.classList.add('faq-question');
+      faqQuestion.textContent = item.question;
+  
+      const faqArrow = document.createElement('span');
+      faqArrow.classList.add('faq-arrow');
+      faqArrow.innerHTML = '&#9660;';
+      faqQuestion.appendChild(faqArrow);
+  
+      const faqAnswer = document.createElement('div');
+      faqAnswer.classList.add('faq-answer');
+      faqAnswer.textContent = item.answer;
+  
+      const separator = document.createElement('hr');
+      separator.classList.add('faq-separator');
+  
+      // Add event listener
+      faqQuestion.addEventListener('click', () => {
+        const allAnswers = document.querySelectorAll('.faq-answer');
+        const allQuestions = document.querySelectorAll('.faq-question');
+        const allSeparators = document.querySelectorAll('.faq-separator');
+  
+        const isAlreadyActive = faqAnswer.classList.contains('active');
+  
+        // Close all
+        allAnswers.forEach(answer => {
+          answer.style.maxHeight = null;
+          answer.classList.remove('active');
+        });
+  
+        allQuestions.forEach(q => q.classList.remove('active'));
+        allSeparators.forEach(s => s.classList.remove('active'));
+  
+        // Open clicked one if it wasn't already open
+        if (!isAlreadyActive) {
+          faqAnswer.style.maxHeight = faqAnswer.scrollHeight + 'px';
+          faqAnswer.classList.add('active');
+          faqQuestion.classList.add('active');
+          separator.classList.add('active');
+        }
+      });
+  
+      // Append elements
+      faqItem.appendChild(faqQuestion);
+      faqItem.appendChild(separator);
+      faqItem.appendChild(faqAnswer);
+      faqContainer.appendChild(faqItem);
+    });
+  }
+  
+  
+  // Initialize the FAQ on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    createFaqElements();
+  });
+  
