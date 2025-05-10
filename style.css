@@ -201,7 +201,7 @@ body {
   background: var(--c-green);
   color: var(--c-white);
   text-align: center;
-  padding: var(--padding-large)0;
+  padding: var(--padding-large)1rem;
   font-size: calc(var(--f-size)*var(--f-scale-m));
   line-height: 1.5rem
 }
