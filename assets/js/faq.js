@@ -6,7 +6,7 @@ const faqData = [
     },
     {
       question: "À partir de quel âge peut-on pratiquer le MMA ?",
-      answer: "..."
+      answer: "L’âge minimum pour adhérer à notre association est de 16 ans."
     },
     {
       question: "Quel équipement est nécessaire pour débuter ?",
