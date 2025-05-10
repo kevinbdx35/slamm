@@ -18,7 +18,7 @@ const faqData = [
     },
     {
       question: "Le MMA est-il dangereux ?",
-      answer: "Pratiqué dans un cadre encadré comme notre association et avec un équipement approprié, le MMA est un sport sécuritaire. Nos cours mettent l'accent sur la technique, le contrôle et le respect du partenaire. Les exercices sont progressifs et adaptés au niveau de chacun, avec des règles strictes de sécurité pour minimiser les risques de blessures grâce à un apprentissage étape par étape des techniques."
+      answer: "Comme tout sport de combat, le MMA comporte des risques. Mais encadré par nos coachs diplômés, avec un équipement adapté et des règles de sécurité strictes, la pratique reste maîtrisée. Nos cours sont progressifs, axés sur la technique et le respect du partenaire."
     },
     {
       question: "Comment se déroule un cours type ?",
