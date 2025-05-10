@@ -6,7 +6,7 @@ const faqData = [
     },
     {
       question: "À partir de quel âge peut-on pratiquer le MMA ?",
-      answer: "Au sein de notre association, nous acceptons les membres à partir de 16 ans. Pour les plus jeunes, en attendant que nous ouvrions des créneaux spécifiques un jour, nous recommandons de commencer par des disciplines plus spécifiques comme le judo, le jiu-jitsu brésilien, la boxe,..., avant de se diriger vers le MMA."
+      answer: "..."
     },
     {
       question: "Quel équipement est nécessaire pour débuter ?",
