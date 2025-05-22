@@ -838,4 +838,22 @@ li {
   margin-bottom: 2px;
 }
 
+/* Responsive - mobile screens */
+  @media (max-width: 480px) {
+    .whatsapp-float {
+      font-size: 14px;
+      padding: 10px 14px;
+      border-width: 4px;
+    }
+
+    .whatsapp-float img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
+    .whatsapp-float span {
+      display: inline;
+    }
+  }
 
