@@ -828,7 +828,7 @@ li {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     transition: background-color 0.3s ease;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .whatsapp-float:hover {
