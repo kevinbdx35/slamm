@@ -818,45 +818,46 @@ li {
     display: flex;
     align-items: center;
     background-color: var(--c-green);
-    padding: 12px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    z-index: 9999;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
-    transition: width 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
-    overflow: hidden;
-    white-space: nowrap;
+    font-family: sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: all 0.3s ease;
   }
 
   .whatsapp-float img {
     width: 28px;
     height: 28px;
+    margin: 0 10px;
   }
 
   .whatsapp-label {
-    margin-left: 10px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    margin-right: 16px;
     font-size: 16px;
   }
 
-  /* Desktop: Show label on hover */
+  /* Desktop version (≥ 481px): full button style */
   @media (min-width: 481px) {
-    .whatsapp-float:hover {
-      border-radius: 40px;
+    .whatsapp-float {
       padding: 12px 18px;
+      border: 5px solid #fff;
+      border-radius: 40px;
     }
 
-    .whatsapp-float:hover .whatsapp-label {
-      opacity: 1;
+    .whatsapp-label {
+      display: inline;
     }
   }
 
-  /* Mobile: icon only */
+  /* Mobile version (≤ 480px): icon only */
   @media (max-width: 480px) {
+    .whatsapp-float {
+      padding: 12px;
+      border-radius: 50%;
+    }
+
     .whatsapp-label {
       display: none;
     }
