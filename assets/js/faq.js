@@ -30,7 +30,7 @@ const faqData = [
     },
     {
       question: "Comment s'inscrire aux cours d'essai ?",
-      answer: "En septembre, vous avez la possibilité de participer à 2 cours d’essai gratuits. À partir d’octobre, les cours d’essai sont proposés au tarif de 5 € par séance, dans la limite de 2 cours maximum par personne. Ce montant sera déduit de l'adhésion si vous vous inscrivez par la suite. Pour réserver, contactez-nous par téléphone au 07 82 77 92 88 ou par email à slamm35800@gmail.com. Merci de prévoir une arrivée 15 minutes avant le début du cours pour l’accueil et la présentation des installations."
+      answer: "En septembre et octobre, vous avez la possibilité de participer à 2 cours d’essai gratuits. À partir de novembre, les cours d’essai sont proposés au tarif de 5 € par séance, dans la limite de 2 cours maximum par personne. Ce montant sera déduit de l'adhésion si vous vous inscrivez par la suite. Pour réserver, contactez-nous par téléphone au 07 82 77 92 88 ou par email à slamm35800@gmail.com. Merci de prévoir une arrivée 15 minutes avant le début du cours pour l’accueil et la présentation des installations."
     }
   ];
   
