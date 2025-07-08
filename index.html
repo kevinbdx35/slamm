@@ -308,7 +308,40 @@
       marker.bindPopup("Salle Omnisport de Saint-Lunaire, 361 Rue de la Saudrais, 35800 Saint-Lunaire").openPopup();
     </script>
 
- <!--Essai button-->       
+ <!--Essai button-->   
+<!-- POPUP FORMULAIRE ASSOCONNECT -->
+<div id="popup-essai" class="popup-overlay">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closePopupEssai()">✕</button>
+    <div class="iframe-asc-container" data-type="collect" data-collect-id="01JZKEZ4VV7J894NN2JKG28QCN"></div>
+  </div>
+</div>
+
+<script src="https://slamm.assoconnect.com/public/build/js/iframe.js"></script>
+
+<script>
+  function openPopupEssai() {
+    document.getElementById('popup-essai').style.display = 'flex';
+  }
+
+  function closePopupEssai() {
+    document.getElementById('popup-essai').style.display = 'none';
+  }
+
+  // Fermer avec la touche "Échap"
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePopupEssai();
+  });
+
+  // Fermer en cliquant en dehors du contenu (overlay)
+  document.getElementById('popup-essai').addEventListener('click', function(e) {
+    const content = document.querySelector('.popup-content');
+    if (!content.contains(e.target)) {
+      closePopupEssai();
+    }
+  });
+</script>
+        
         <a href="#" class="whatsapp-float" onclick="openPopupEssai(); return false;" rel="noopener noreferrer">
            🥊 Réserve ton essai
         </a>
